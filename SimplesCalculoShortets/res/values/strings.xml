@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Desconto Simples</string>
+    <string name="action_settings">Configuração</string>
+    <string name="hello_world"></string>
+    <string name="billTotal">Valor</string>
+    <string name="desc">Desconto</string>
+    <string name="acresc">Acréscimo</string>
+    <string name="total">Total</string>
+    <string name="custom">Taxa(%)</string>
+    <string name="taxa">Taxa</string>
+    <string name="tempo">Tempo</string>
+    <string name="zero">0.00</string>
+    <string name="confirmTitle">Confirmar</string>
+    <string name="cancel">Confirmar</string>
+    <string name="confirmMessage">Confirmar</string>
+    <string name="falar">speak</string>
+    <string name="title_activity_juros_compostos">JurosCompostos</string>
+    <string name="title_activity_principal">VIDA SIMPLES</string>
+    <string name="dummy_button">VIDA SIMPLES</string>
+    <string name="dummy_content">VIDA SIMPLES</string>
+    <string name="descontoSimplesDescricao">Calculo de desconto de porcentagem</string>
+    <string name="agendaDescricao">Agendar um compromisso</string>
+    <string name="caledarioDescricao">Visualizar agenda de compromissos</string>
+    <string name="title_activity_desconto_simples">DescontoSimples</string>
+    <string name="title_activity_juros">Juros</string>
+    <string name="jurosDescricao">Calculo de Juros simples e juros compostos</string>
+    <string name="financiamentosDescricao">Calculo de Financiamentos</string>
+    <string name="title_activity_financiamentos">Financiamentos</string>
+    <string name="label_tx_periodo">% ao</string>
+    <string name="valor_futuro">Valor Futuro</string>
+    <string name="valor_presente">Valor Presente</string>
+    <string name="jurosSimples">Simples</string>
+    <string name="jurosComposto">Composto</string>
+    <string name="juros">Juros</string>
+    <string name="dia">Dia</string>
+    <string name="mes">Mês</string>
+    <string name="ano">Ano</string>
+
+    <string-array name="periodo">
+        <item>@string/dia</item>
+        <item>@string/mes</item>
+        <item>@string/ano</item>
+    </string-array>
+
+    <string name="txPerc">%</string>
+    <string name="dinheiro">R$</string>
+
+    <string-array name="taxa">
+        <item>@string/dinheiro</item>
+        <item>@string/txPerc</item>
+    </string-array>
+
+    <string name="title_activity_meu_boleto">Meu Boleto</string>
+    <string name="valor_doc">Valor do Documento</string>
+    <string name="dt_vencimento">Data Vencimento</string>
+    <string name="dt_pgto">Data Pagamento</string>
+    <string name="juros_ad">Juros(ao dia)</string>
+    <string name="totalMultaJuro">Total de Multa e Juro</string>
+    <string name="valorAtualizado">Valor Atualizado</string>
+    <string name="multa">Multa</string>
+    <string name="dataStr">DD/MM/AAAA</string>
+    <string name="labelRespDesconto">O valor com desconto é:</string>
+    <string name="labelRespAcrescimo">O valor com acréscimo é:</string>
+    <string name="title_activity_tab">TabActivity</string>
+   
+    <string name="limpartela">Deseja limpar a tela?</string>
+    <string name="enviar">Enviar</string>
+    <string name="limpar">Limpar</string>
+    <string name="visualizar">Visualizar</string>
+    
+    <string name="respostadesconto" >Valor Presente:%1$.2f \nTaxa:%2$.2f \nValor final:%3$.2f</string>
+    <string name="respostajuros" >Valor Presente:%1$.2f \nTaxa:%2$.2f %3$s ao %4$s \nTempo: %5$d %6$s \nValor final:%7$.2f</string>
+    <string name="respostaboleto" >Valor do Documento: %1$.2f \nData Vecimento: %2$s \nData Pagamento: %3$s \nMulta: %4$s \nJuros: %5$s \nValor Atualizado: %6$.2f</string>
+    
+    
+</resources>
