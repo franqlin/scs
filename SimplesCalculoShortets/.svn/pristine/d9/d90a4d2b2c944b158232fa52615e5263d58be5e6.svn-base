@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_span="2"
+     >
+
+<TableLayout 
+    android:id="@+id/tableLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dp"
+    android:stretchColumns="1,2,3"
+    >
+
+    <!-- tableRow0 -->
+
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            
+            android:orientation="horizontal" >
+
+            <RadioButton
+                android:id="@+id/idRadioDesconto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="escolherTipoCalculo"
+                android:text="@string/desc"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+         
+            <RadioButton
+                android:id="@+id/idRadioAcrescimo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="escolherTipoCalculo"
+                android:text="@string/acresc"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RadioGroup>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent"
+        android:layout_gravity="center_horizontal"
+         >
+
+            <EditText
+            android:id="@+id/idValorPresente"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/valor_presente"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="12"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            style="@style/campo"  
+            android:textAlignment="center"
+             > <requestFocus /></EditText>
+            
+        <!--
+             ImageButton
+            android:id="@+id/btnSpeak"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/falar"
+            android:src="@android:drawable/ic_btn_speak_now" /
+        -->
+    </TableRow>
+
+    <!-- tableRow4 -->
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" 
+        >
+        
+            <EditText
+            android:id="@+id/idPorcentagem"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="@string/custom"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="12"
+            android:textSize="34sp"
+            android:textStyle="bold"
+            style="@style/campo"  
+            android:textAlignment="center"
+             > </EditText>
+          
+
+    </TableRow>
+
+  <TableRow
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" >
+              <TextView
+            android:id="@+id/labelResp1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:layout_weight="1"
+	        android:textAppearance="?android:attr/textAppearanceMedium"
+            android:textStyle="bold"
+         
+             />
+      
+       
+  </TableRow>
+  
+    <TableRow
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+        <EditText
+            android:id="@+id/idTotalDescontoFinal"
+            style="@style/campo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/labelResp1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="146dp"
+            android:layout_weight="1"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:focusable="false"
+            android:gravity="center"
+            android:longClickable="false"
+            android:text="@string/zero"
+            android:textIsSelectable="true"
+            android:textSize="34sp"
+            android:textStyle="bold" />
+       
+  </TableRow>
+
+  <!-- include
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0.01"
+      layout="@layout/resposta" /-->
+
+</TableLayout>
+</ScrollView>

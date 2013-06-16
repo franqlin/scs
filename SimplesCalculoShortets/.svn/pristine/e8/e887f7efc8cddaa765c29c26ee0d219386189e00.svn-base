@@ -1,0 +1,233 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_span="2" 
+    
+    >
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:stretchColumns="*" >
+
+<!--Primeiro item do menu   -->
+        <TableRow android:layout_gravity="center" >
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/fundomenuazul"
+              android:clickable="true"
+              android:padding="10dip" >
+
+              <LinearLayout
+                  android:id="@+id/thumbnail"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                
+                  android:padding="3dip" >
+
+                  <ImageView
+                      android:id="@+id/idBntDescSimples"
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/porcent" />
+              </LinearLayout>
+
+              <TextView
+                  android:id="@+id/eng_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="PORCENTAGEM"
+                  android:textSize="20dip"
+                  android:textStyle="bold"
+                  android:textColor="#333845"
+                  android:typeface="sans" />
+
+          </RelativeLayout>
+        </TableRow>
+     <!--segundo item de Menu  -->
+     
+     <TableRow android:layout_gravity="center">
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:padding="10dip"
+              android:background="@drawable/fundomenuverde"
+               >
+
+              <LinearLayout
+                  android:id="@+id/thumbnail"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                  android:padding="3dip" >
+
+                  <ImageView
+                      android:id="@+id/idBntJuros"
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/juros" />
+              </LinearLayout>
+
+
+              <TextView
+                  android:id="@+id/eng_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="JUROS"
+                  android:textSize="20dip"
+                  android:textStyle="bold"
+                  android:typeface="sans" 
+                  android:textColor="#333845"
+                  />
+      
+          </RelativeLayout>
+        </TableRow>
+        
+                
+  <TableRow android:layout_gravity="center">
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:padding="10dip" 
+              android:background="@drawable/fundomenuazul"
+              >
+              
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                  android:padding="3dip" >
+
+                  <ImageView
+                      android:id="@+id/idBntMeuBoleto"
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/fql" />
+              </LinearLayout>
+
+              <TextView
+                  android:id="@+id/eng_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="BOLETO"
+                  android:textSize="20dip"
+                  android:textStyle="bold"
+                  android:typeface="sans" 
+                  android:textColor="#333845"
+                  />
+
+          </RelativeLayout>
+        </TableRow>
+           <!-- Btao de agenda -->     
+                        
+  <TableRow android:layout_gravity="center">
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:padding="10dip"
+              android:background="@drawable/fundomenuverde"
+               >
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                  android:padding="3dip" >
+
+                  <ImageView
+                      android:id="@+id/idBntgCalc"
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/agenda" />
+              </LinearLayout>
+
+              <TextView
+                  android:id="@+id/eng_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="AGENDA"
+                  android:textSize="20dip"
+                  android:textStyle="bold"
+                  android:typeface="sans" 
+                  android:textColor="#333845"
+                  />
+
+          </RelativeLayout>
+        </TableRow>
+        
+  
+    <TableRow android:layout_gravity="center">
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:padding="10dip" 
+              android:background="@drawable/fundomenuazul"
+              >
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                  android:padding="3dip" >
+
+                  <ImageView
+                      android:id="@+id/idBntCalendar"
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/calendario" />
+              </LinearLayout>
+
+              <TextView
+                  android:id="@+id/eng_name"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="CALENDÁRIO"
+                  android:textSize="20dip"
+                  android:textStyle="bold"
+                  android:typeface="sans" 
+                  android:textColor="#333845"
+                  />
+
+          </RelativeLayout>
+        </TableRow>
+     
+    </TableLayout>
+
+</ScrollView>
+
+
+

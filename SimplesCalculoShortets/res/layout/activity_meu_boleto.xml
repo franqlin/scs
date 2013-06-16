@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_span="2"
+    android:background="@drawable/fundomenuazul"
+    tools:context=".MeuBoleto" >
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:stretchColumns="1,2,3" >
+
+        <TableRow
+            android:id="@+id/tableRow0"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" >
+
+            <EditText
+                android:id="@+id/idValorPresente"
+                style="@style/campo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_span="3"
+                android:layout_weight="1"
+                android:ems="10"
+                android:hint="@string/valor_doc"
+                android:inputType="numberDecimal"
+                android:lines="1"
+                android:maxLength="12"
+                android:textAlignment="center"
+                android:textSize="@dimen/display_digital"
+                android:textStyle="bold" >
+
+                <requestFocus android:layout_width="match_parent" />
+
+            </EditText>
+        </TableRow>
+
+        <!-- tableRow4 -->
+
+        <TableRow
+            android:id="@+id/tableRow4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+          
+
+            <EditText
+                android:id="@+id/idEdDtVcto"
+                style="@style/campo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="right"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:ems="12"
+                android:focusable="false"
+                android:hint="@string/dt_vencimento"
+                android:inputType="date"
+                android:lines="1"
+                android:longClickable="false"
+                android:maxLength="10"
+                android:textIsSelectable="true"
+                android:textSize="@dimen/display_digital"
+                android:textStyle="bold"/>
+            
+
+
+            <ImageButton
+                android:id="@+id/idBtVcto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/dt_vencimento"
+                android:cropToPadding="true"
+                android:onClick="selecionarDataVencimento"
+                android:src="@drawable/datecal" 
+                android:background="@null"
+                />
+         
+        </TableRow>
+
+        <!-- tableRow5 -->
+
+        <TableRow
+            android:id="@+id/tableRow5"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+            <EditText
+                android:id="@+id/idEdDtPgto"
+                style="@style/campo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:cursorVisible="false"
+                android:ems="10"
+                android:focusable="false"
+                android:hint="@string/dt_pgto"
+                android:inputType="numberDecimal"
+                android:lines="1"
+                android:longClickable="false"
+                android:maxLength="10"
+                android:textIsSelectable="true" 
+                android:gravity="right"
+                android:textSize="@dimen/display_digital"
+                android:textStyle="bold"
+                />
+
+            <ImageButton
+                android:id="@+id/idBtVcto2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/dt_vencimento"
+                android:cropToPadding="true"
+                android:onClick="selecionarDataPagamento"
+                android:src="@drawable/datecal"
+                android:background="@null"
+                 />
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+            <EditText
+                android:id="@+id/idEdMulta"
+                style="@style/campo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:lines="1"
+                android:maxLength="7"
+                android:hint="@string/multa"
+                android:gravity="right"
+                android:textSize="@dimen/display_digital"
+                android:textStyle="bold"
+                >
+            </EditText>
+
+            <Spinner
+                android:id="@+id/idTipoMulta"
+                style="@style/texto"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/taxa"
+                android:prompt="@string/label_tx_periodo" 
+                />
+            
+
+        </TableRow>
+
+        <TableRow
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+
+         
+
+            <EditText
+                android:id="@+id/idTaxaJuro"
+                style="@style/campo"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ems="10"
+                android:inputType="numberDecimal"
+                android:lines="1"
+                android:maxLength="7"
+                android:hint="@string/juros_ad"
+                android:gravity="right"
+                android:textSize="@dimen/display_digital"
+                android:textStyle="bold"
+                />
+
+            <Spinner
+                android:id="@+id/idTipoTx"
+                style="@style/texto"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:entries="@array/taxa"
+                android:prompt="@string/label_tx_periodo" />
+
+        </TableRow>
+
+        <include
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.01"
+            layout="@layout/resposta" />
+    </TableLayout>
+
+</ScrollView>

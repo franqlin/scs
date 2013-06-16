@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_span="2" 
+    
+    >
+
+    <TableLayout
+        android:id="@+id/tableLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:stretchColumns="*" >
+
+<!--Primeiro item do menu   -->
+        <TableRow android:layout_gravity="center" android:id="@+id/trPorcentagem" >
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:background="@drawable/fundomenuazul"
+              android:clickable="true"
+              android:padding="10dip" 
+              android:id="@+id/idBntDescSimples"
+              >
+
+              <LinearLayout
+                  android:id="@+id/thumbnail"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                  android:padding="3dip" >
+
+                  <ImageView
+                      
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/porcent" />
+              </LinearLayout>
+
+              <TextView
+                  android:id="@+id/tvPorcentagem"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="Porcentagem"
+                  android:textSize="@dimen/fonte_menu"
+                  android:textStyle="bold"
+                  android:textColor="#333845"
+                  />
+                  <ImageView android:layout_width="20dip"
+                   android:layout_height="20dip"
+                   android:src="@drawable/seta"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true"
+                   android:id="@+id/idBntDescSimplesSeta"
+                    />
+          </RelativeLayout>
+        </TableRow>
+     <!--segundo item de Menu  -->
+     
+     <TableRow android:layout_gravity="center">
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:padding="10dip"
+              android:background="@drawable/fundomenuverde"
+              android:id="@+id/idBntJuros" 
+               >
+
+              <LinearLayout
+                  android:id="@+id/thumbnail"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                  android:padding="3dip" >
+
+                  <ImageView
+                      
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/juros" />
+              </LinearLayout>
+
+
+              <TextView
+                  android:id="@+id/tvJuros"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="Juros"
+                  android:textSize="@dimen/fonte_menu"
+                  android:textStyle="bold"
+                  android:textColor="#333845"
+                  />
+                   <ImageView android:layout_width="20dip"
+                   android:layout_height="20dip"
+                   android:src="@drawable/seta"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true" />
+          </RelativeLayout>
+        </TableRow>
+        
+                
+  <TableRow android:layout_gravity="center">
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:padding="10dip" 
+              android:background="@drawable/fundomenuazul"
+              android:id="@+id/idBntMeuBoleto"
+              >
+              
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                  android:padding="3dip" >
+
+                  <ImageView
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/boleto" />
+              </LinearLayout>
+
+              <TextView
+                  android:id="@+id/tvBoleto"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="Boleto"
+                  android:textSize="@dimen/fonte_menu"
+                  android:textStyle="bold"
+                  android:textColor="#333845"
+                  />
+                  <ImageView android:layout_width="20dip"
+                   android:layout_height="20dip"
+                   android:src="@drawable/seta"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true" />
+          </RelativeLayout>
+        </TableRow>
+           <!-- Btao de agenda -->     
+                        
+  <TableRow android:layout_gravity="center">
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:padding="10dip"
+              android:background="@drawable/fundomenuverde"
+              android:id="@+id/idBntgCalc"
+               >
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                  android:padding="3dip" >
+
+                  <ImageView
+                     
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/agenda" />
+              </LinearLayout>
+
+              <TextView
+                  android:id="@+id/tvAgenda"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="Agenda"
+				  android:textSize="@dimen/fonte_menu"
+                  android:textStyle="bold"
+                  android:textColor="#333845"
+                  />
+                    <ImageView android:layout_width="20dip"
+                   android:layout_height="20dip"
+                   android:src="@drawable/seta"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true" />
+          </RelativeLayout>
+        </TableRow>
+        
+  
+    <TableRow android:layout_gravity="center">
+
+          <RelativeLayout
+              android:layout_width="fill_parent"
+              android:layout_height="wrap_content"
+              android:clickable="true"
+              android:padding="10dip" 
+              android:background="@drawable/fundomenuazul"
+              android:id="@+id/idBntCalendar"
+              >
+
+              <LinearLayout
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_alignParentLeft="true"
+                  android:layout_marginRight="10dip"
+                  android:padding="3dip" >
+
+                  <ImageView
+                     
+                      android:layout_width="60dip"
+                      android:layout_height="60dip"
+                      android:src="@drawable/calendario" />
+              </LinearLayout>
+
+              <TextView
+                  android:id="@+id/tvCalendario"
+                  android:layout_width="wrap_content"
+                  android:layout_height="wrap_content"
+                  android:layout_centerHorizontal="true"
+                  android:layout_centerVertical="true"
+                  android:paddingTop="5dip"
+                  android:text="Calendário"
+                  android:textSize="@dimen/fonte_menu"
+                  android:textStyle="bold"
+                  android:textColor="#333845"
+                  />
+					<ImageView android:layout_width="20dip"
+                   android:layout_height="20dip"
+                   android:src="@drawable/seta"
+                   android:layout_alignParentRight="true"
+                   android:layout_centerVertical="true" />
+          </RelativeLayout>
+        </TableRow>
+     
+    </TableLayout>
+
+</ScrollView>
+
+
+
