@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_span="2"
+    android:background="@drawable/fundomenuazul"
+     >
+<TableLayout 
+    android:id="@+id/tableLayout"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:padding="5dp"
+    android:stretchColumns="1,2,3"
+     >
+
+    <!-- tableRow0 -->
+
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+        <RadioGroup
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="4"
+            android:orientation="horizontal" 
+           
+            >
+
+            <RadioButton
+                android:id="@+id/idDjurosSimplesRadio"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:checked="true"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/jurosSimples"
+                android:textSize="20sp"
+                android:textStyle="bold" 
+                 style="@style/texto"
+                />
+
+            <RadioButton
+                android:id="@+id/idDjurosComposto"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="onRadioButtonClicked"
+                android:text="@string/jurosComposto"
+                android:textSize="20sp"
+                android:textStyle="bold" 
+                 style="@style/texto"
+                />
+        </RadioGroup>
+    </TableRow>
+
+    <TableRow
+        android:id="@+id/tableRow0"
+        android:layout_width="fill_parent"
+        android:layout_height="fill_parent" >
+
+
+        <EditText
+            android:id="@+id/idValorPresente"
+            style="@style/campo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_span="3"
+            android:layout_weight="1"
+            android:ems="10"
+            android:hint="Valor Presente"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="12"
+            android:textAlignment="center"
+            android:textSize="@dimen/display_digital"
+            android:textStyle="bold" />
+    </TableRow>
+
+    <!-- tableRow4 -->
+
+    <TableRow
+        android:id="@+id/tableRow4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+                <EditText
+            android:id="@+id/idValorPercentual"
+            style="@style/campo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="7"
+            android:hint="Taxa/Tempo "
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="12"
+            android:textAlignment="center"
+            android:textSize="@dimen/display_digital"
+            android:textStyle="bold" />
+        <Spinner
+            android:id="@+id/idPeriodoTx"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/periodo"
+            android:prompt="@string/label_tx_periodo" />
+    </TableRow>
+
+    <!-- tableRow5 -->
+
+    <TableRow
+        android:id="@+id/tableRow5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        
+       <EditText
+            android:id="@+id/idTempo"
+            style="@style/campo"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:ems="7"
+            android:hint="Tempo"
+            android:inputType="numberDecimal"
+            android:lines="1"
+            android:maxLength="12"
+            android:textAlignment="center"
+            android:textSize="@dimen/display_digital"
+            android:textStyle="bold" />
+
+        <Spinner
+            android:id="@+id/idTipoPeriodo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:entries="@array/periodo"
+            android:prompt="@string/label_tx_periodo" />
+    </TableRow>
+
+
+  <include
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_weight="0.01"
+      layout="@layout/resposta" />
+
+</TableLayout>
+</ScrollView>

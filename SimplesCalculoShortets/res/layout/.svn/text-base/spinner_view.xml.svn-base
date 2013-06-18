@@ -1,0 +1,8 @@
+<TextView android:id="@+id/spinnerText" 
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content" 
+    android:layout_centerHorizontal="true"
+    android:textColor="#2f4f4f" 
+    android:textSize="20dp"
+    android:background="@drawable/fundomenuverde" 
+    xmlns:android="http://schemas.android.com/apk/res/android"/>
