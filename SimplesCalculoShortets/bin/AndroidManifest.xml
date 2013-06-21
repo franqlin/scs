@@ -10,9 +10,9 @@
 
     <application
         android:allowBackup="true"
-        android:icon="@drawable/ic_launcher" android:theme="@style/Theme.Example">
+        android:icon="@drawable/ic_launcher" android:theme="@style/Theme.Daza">
         <activity
-            android:name="org.shortlets.simplescalculo.Principal"
+            android:name="Principal"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -39,22 +39,10 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="org.shortlets.simplescalculo.Financiamentos"
-            android:label="@string/title_activity_financiamentos" >
-            <intent-filter>
-                <action android:name="org.shortlets.simplescalculo.Financiamentos" />
-
-                <category android:name="android.intent.category.DEFAULT" />
-            </intent-filter>
-        </activity>
-        <activity
             android:name="org.shortlets.simplescalculo.MeuBoleto"
             android:label="@string/title_activity_meu_boleto" >
         </activity>
-        <activity
-            android:name="org.shortlets.simplescalculo.TabActivity"
-            android:label="@string/title_activity_tab" >
-        </activity>
+
     </application>
 
 </manifest>

@@ -27,13 +27,17 @@ import com.actionbarsherlock.app.SherlockActivity;
 import com.actionbarsherlock.view.MenuItem;
 import com.actionbarsherlock.widget.ShareActionProvider;
 
-public class Principal extends Activity {
+public class Principal extends Activity implements OnCreateOptionsMenuListener {
 
+	
+	ActionBarSherlock mSherlock = ActionBarSherlock.wrap(this);
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_principal);
+        mSherlock.setUiOptions(ActivityInfo.UIOPTION_SPLIT_ACTION_BAR_WHEN_NARROW);
+        mSherlock.setContentView(R.layout.activity_principal);
+		//setContentView(R.layout.activity_principal);
 		configFontTypeFace();
 		configImageButtons();
 
@@ -63,7 +67,7 @@ public class Principal extends Activity {
 	}
 
 	private void configFontTypeFace() {
-		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/DenneShuffleEuroHollow.ttf");
+		Typeface tf = Typeface.createFromAsset(getAssets(), "fonts/DynoBold.ttf");
         
         TextView tvPorcentagem = (TextView) findViewById(R.id.tvPorcentagem);
         tvPorcentagem.setTypeface(tf);
@@ -79,14 +83,25 @@ public class Principal extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
-		return true;
+		
+		 return mSherlock.dispatchCreateOptionsMenu(menu);
 	}
-
-
 	
+	private final int SALVAR_ID = Menu.FIRST;
+	private final int BUSCAR_ID = Menu.FIRST + 1;
+	private final int ATUALIZAR_ID = Menu.FIRST + 2;
+	
+	@Override
+	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
+        
+		menu.add(Menu.NONE, BUSCAR_ID, Menu.NONE,getString(R.string.ajuda))
+            .setIcon(R.drawable.help)
+            .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
-    
+		
 
+        return true;
+	}
 
 
 }

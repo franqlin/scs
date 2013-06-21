@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_span="2"
-    android:background="@drawable/fundomenuazul"
+    android:background="@drawable/fundomenu"
      >
 <TableLayout 
     android:id="@+id/tableLayout"
@@ -73,7 +73,9 @@
             android:maxLength="12"
             android:textAlignment="center"
             android:textSize="@dimen/display_digital"
-            android:textStyle="bold" />
+            android:textStyle="bold" 
+            android:textCursorDrawable="@drawable/color_cursor"
+            />
     </TableRow>
 
     <!-- tableRow4 -->

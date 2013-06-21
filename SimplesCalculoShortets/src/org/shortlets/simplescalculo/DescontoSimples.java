@@ -159,15 +159,15 @@ public class DescontoSimples extends Activity implements OnCreateOptionsMenuList
         
 
 		menu.add(Menu.NONE, SALVAR_ID, Menu.NONE,getString(R.string.enviar))
-            .setIcon( R.drawable.compartilhar)
+            .setIcon( R.drawable.ic_title_share_default)
             .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
 		menu.add(Menu.NONE, BUSCAR_ID, Menu.NONE,getString(R.string.visualizar))
-            .setIcon(R.drawable.visualizar)
+            .setIcon(R.drawable.ic_search)
             .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
 		menu.add(Menu.NONE, ATUALIZAR_ID, Menu.NONE,getString(R.string.limpar))
-            .setIcon( R.drawable.atualizar)
+            .setIcon( R.drawable.ic_refresh)
             .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
 
         return true;

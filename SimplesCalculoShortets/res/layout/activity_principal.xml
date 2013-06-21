@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_span="2" 
-    
+    android:background="@drawable/fundomenu"
     >
 
     <TableLayout
@@ -19,7 +19,7 @@
           <RelativeLayout
               android:layout_width="fill_parent"
               android:layout_height="wrap_content"
-              android:background="@drawable/fundomenuazul"
+              android:background="@drawable/seletor"
               android:clickable="true"
               android:padding="10dip" 
               android:id="@+id/idBntDescSimples"
@@ -37,7 +37,7 @@
                       
                       android:layout_width="60dip"
                       android:layout_height="60dip"
-                      android:src="@drawable/porcent" />
+                      android:src="@drawable/icporcetagem" />
               </LinearLayout>
 
               <TextView
@@ -59,7 +59,12 @@
                    android:layout_centerVertical="true"
                    android:id="@+id/idBntDescSimplesSeta"
                     />
+                                        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:src="@drawable/gradient_line" />
           </RelativeLayout>
+
         </TableRow>
      <!--segundo item de Menu  -->
      
@@ -70,7 +75,7 @@
               android:layout_height="wrap_content"
               android:clickable="true"
               android:padding="10dip"
-              android:background="@drawable/fundomenuverde"
+              android:background="@drawable/seletor"
               android:id="@+id/idBntJuros" 
                >
 
@@ -86,7 +91,7 @@
                       
                       android:layout_width="60dip"
                       android:layout_height="60dip"
-                      android:src="@drawable/juros" />
+                      android:src="@drawable/icjuros" />
               </LinearLayout>
 
 
@@ -107,6 +112,10 @@
                    android:src="@drawable/seta"
                    android:layout_alignParentRight="true"
                    android:layout_centerVertical="true" />
+                                         <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:src="@drawable/gradient_line" />
           </RelativeLayout>
         </TableRow>
         
@@ -118,7 +127,7 @@
               android:layout_height="wrap_content"
               android:clickable="true"
               android:padding="10dip" 
-              android:background="@drawable/fundomenuazul"
+              android:background="@drawable/seletor"
               android:id="@+id/idBntMeuBoleto"
               >
               
@@ -132,7 +141,7 @@
                   <ImageView
                       android:layout_width="60dip"
                       android:layout_height="60dip"
-                      android:src="@drawable/boleto" />
+                      android:src="@drawable/icboleto" />
               </LinearLayout>
 
               <TextView
@@ -152,6 +161,10 @@
                    android:src="@drawable/seta"
                    android:layout_alignParentRight="true"
                    android:layout_centerVertical="true" />
+                                        <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:src="@drawable/gradient_line" />
           </RelativeLayout>
         </TableRow>
            <!-- Btao de agenda -->     
@@ -163,7 +176,7 @@
               android:layout_height="wrap_content"
               android:clickable="true"
               android:padding="10dip"
-              android:background="@drawable/fundomenuverde"
+              android:background="@drawable/seletor"
               android:id="@+id/idBntgCalc"
                >
 
@@ -178,7 +191,7 @@
                      
                       android:layout_width="60dip"
                       android:layout_height="60dip"
-                      android:src="@drawable/agenda" />
+                      android:src="@drawable/icagenda" />
               </LinearLayout>
 
               <TextView
@@ -198,6 +211,10 @@
                    android:src="@drawable/seta"
                    android:layout_alignParentRight="true"
                    android:layout_centerVertical="true" />
+                                          <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:src="@drawable/gradient_line" />
           </RelativeLayout>
         </TableRow>
         
@@ -209,7 +226,7 @@
               android:layout_height="wrap_content"
               android:clickable="true"
               android:padding="10dip" 
-              android:background="@drawable/fundomenuazul"
+              android:background="@drawable/seletor"
               android:id="@+id/idBntCalendar"
               >
 
@@ -224,7 +241,7 @@
                      
                       android:layout_width="60dip"
                       android:layout_height="60dip"
-                      android:src="@drawable/calendario" />
+                      android:src="@drawable/iccalendario" />
               </LinearLayout>
 
               <TextView
@@ -244,6 +261,10 @@
                    android:src="@drawable/seta"
                    android:layout_alignParentRight="true"
                    android:layout_centerVertical="true" />
+					                      <ImageView
+                android:layout_width="fill_parent"
+                android:layout_height="2dp"
+                android:src="@drawable/gradient_line" />
           </RelativeLayout>
         </TableRow>
      

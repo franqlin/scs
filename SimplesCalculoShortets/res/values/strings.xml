@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">Desconto Simples</string>
+    <string name="app_name">PGTO</string>
     <string name="action_settings">Configuração</string>
     <string name="hello_world"></string>
     <string name="billTotal">Valor</string>
@@ -17,14 +17,12 @@
     <string name="confirmMessage">Confirmar</string>
     <string name="falar">speak</string>
     <string name="title_activity_juros_compostos">JurosCompostos</string>
-    <string name="title_activity_principal">VIDA SIMPLES</string>
-    <string name="dummy_button">VIDA SIMPLES</string>
-    <string name="dummy_content">VIDA SIMPLES</string>
+    <string name="title_activity_principal">VIDA SIMPLES</string>             
     <string name="descontoSimplesDescricao">Calculo de desconto de porcentagem</string>
     <string name="agendaDescricao">Agendar um compromisso</string>
     <string name="caledarioDescricao">Visualizar agenda de compromissos</string>
-    <string name="title_activity_desconto_simples">DescontoSimples</string>
-    <string name="title_activity_juros">Juros</string>
+    <string name="title_activity_desconto_simples">Porcentagem</string>
+    <string name="title_activity_juros">Juros simples ou composto</string>
     <string name="jurosDescricao">Calculo de Juros simples e juros compostos</string>
     <string name="financiamentosDescricao">Calculo de Financiamentos</string>
     <string name="title_activity_financiamentos">Financiamentos</string>
@@ -52,7 +50,7 @@
         <item>@string/txPerc</item>
     </string-array>
 
-    <string name="title_activity_meu_boleto">Meu Boleto</string>
+    <string name="title_activity_meu_boleto">Boleto</string>
     <string name="valor_doc">Valor do Documento</string>
     <string name="dt_vencimento">Data Vencimento</string>
     <string name="dt_pgto">Data Pagamento</string>
@@ -69,7 +67,7 @@
     <string name="enviar">Enviar</string>
     <string name="limpar">Limpar</string>
     <string name="visualizar">Visualizar</string>
-    
+    <string name="ajuda">Ajuda</string>
     <string name="respostadesconto" >Valor Presente:%1$.2f \nTaxa:%2$.2f \nValor final:%3$.2f</string>
     <string name="respostajuros" >Valor Presente:%1$.2f \nTaxa:%2$.2f %3$s ao %4$s \nTempo: %5$d %6$s \nValor final:%7$.2f</string>
     <string name="respostaboleto" >Valor do Documento: %1$.2f \nData Vecimento: %2$s \nData Pagamento: %3$s \nMulta: %4$s \nJuros: %5$s \nValor Atualizado: %6$.2f</string>
