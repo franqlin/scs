@@ -243,7 +243,7 @@ public class MeuBoleto extends FragmentActivity implements OnCreateOptionsMenuLi
 
 		switch (item.getItemId()) {
 		case SALVAR_ID:
-			 String msg= "Pagar boleto"+"\n"+String.format( getString(R.string.respostaboleto), 
+			 String msg= getString(R.string.jaco_diz)+ "Boleto"+"\n"+String.format( getString(R.string.respostaboleto), 
 					 valorBoleto,dtVcto.getText().toString(),
 					 dtPgto.getText().toString(),
 					 multaFormatada,

@@ -36,7 +36,7 @@ public class Juros extends Activity implements OnCreateOptionsMenuListener {
 	private double dValorPresent;
 	private double dPercentual;
 	private double valorFinal=0.0;
-	private int iTempo;
+	private double iTempo;
 	
 	ActionBarSherlock mSherlock = ActionBarSherlock.wrap(this);
 	private EditText valorPresente;
@@ -60,8 +60,7 @@ public class Juros extends Activity implements OnCreateOptionsMenuListener {
         
 		if(savedInstanceState ==null){
 			dValorPresent =0.0;
-			dValorPresent=0.0;
-			iTempo=0;
+			iTempo=0.0;
 		}else{
 			
 		}
@@ -140,9 +139,10 @@ public class Juros extends Activity implements OnCreateOptionsMenuListener {
         
         String txPeriodoStr =this.txPeriodo_.toString().toLowerCase();
         String tpPeriodoStr =this.tpPeriodo_.toString().toLowerCase()+"(s)";
+        double juros_ = valorFinal-dValorPresent;
 		switch (item.getItemId()) {
 		case SALVAR_ID:
-			 String msg= titulo+"\n"+String.format( getString(R.string.respostajuros), dValorPresent,dPercentual,"%",txPeriodoStr,iTempo,tpPeriodoStr,valorFinal);
+			 String msg= getString(R.string.jaco_diz)+ titulo+"\n"+String.format( getString(R.string.respostajuros), dValorPresent,dPercentual,"%",txPeriodoStr,iTempo,tpPeriodoStr,juros_,valorFinal);
 			 ViewUtil.enviarMensagem(msg, this);
 			break;
 
@@ -163,10 +163,14 @@ public class Juros extends Activity implements OnCreateOptionsMenuListener {
 				alertaBuilder.builderTextView(R.id.resp2, String.format("%.02f", dPercentual)+"% ao "+ txPeriodoStr);
 				//Tempo
             	alertaBuilder.builderTextView(R.id.label3, getString(R.string.tempo));
-				alertaBuilder.builderTextView(R.id.resp3, String.format(iTempo +" "+ tpPeriodoStr));
+				alertaBuilder.builderTextView(R.id.resp3, String.format("%.02f",iTempo)+" "+ tpPeriodoStr);
+				
+				//juros
+            	alertaBuilder.builderTextView(R.id.label4, getString(R.string.juros));
+				alertaBuilder.builderTextView(R.id.resp4, String.format("%.02f",juros_));	
 				// Valor Futuro
-            	alertaBuilder.builderTextView(R.id.label4, getString(R.string.valor_futuro));
-				alertaBuilder.builderTextView(R.id.resp4,  getString(R.string.dinheiro)+" " +String.format("%.02f", valorFinal));
+            	alertaBuilder.builderTextView(R.id.label5, getString(R.string.valor_futuro));
+				alertaBuilder.builderTextView(R.id.resp5,  getString(R.string.dinheiro)+" " +String.format("%.02f", valorFinal));
 				
 				
 			} catch (ViewException e) {
@@ -238,7 +242,7 @@ public class Juros extends Activity implements OnCreateOptionsMenuListener {
 					 Log.i("VALOR_TAXA::", "::"+dPercentual);
 					break;
 				case TEMPO:
-					iTempo =  ViewFormatacaoUtil.EditTextToInteiro(s);
+					iTempo =  ViewFormatacaoUtil.EditTextToDouble(s);
 					Log.i("TEMPO::", "::"+iTempo);
 					break;
 				default:

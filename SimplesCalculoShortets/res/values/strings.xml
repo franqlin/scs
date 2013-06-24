@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">PGTO</string>
+    <string name="app_name">JACÓ</string>
     <string name="action_settings">Configuração</string>
     <string name="hello_world"></string>
     <string name="billTotal">Valor</string>
@@ -17,7 +17,7 @@
     <string name="confirmMessage">Confirmar</string>
     <string name="falar">speak</string>
     <string name="title_activity_juros_compostos">JurosCompostos</string>
-    <string name="title_activity_principal">VIDA SIMPLES</string>             
+    <string name="title_activity_principal">VIDA SIMPLES</string>
     <string name="descontoSimplesDescricao">Calculo de desconto de porcentagem</string>
     <string name="agendaDescricao">Agendar um compromisso</string>
     <string name="caledarioDescricao">Visualizar agenda de compromissos</string>
@@ -62,15 +62,21 @@
     <string name="labelRespDesconto">O valor com desconto é:</string>
     <string name="labelRespAcrescimo">O valor com acréscimo é:</string>
     <string name="title_activity_tab">TabActivity</string>
-   
     <string name="limpartela">Deseja limpar a tela?</string>
     <string name="enviar">Enviar</string>
     <string name="limpar">Limpar</string>
     <string name="visualizar">Visualizar</string>
     <string name="ajuda">Ajuda</string>
-    <string name="respostadesconto" >Valor Presente:%1$.2f \nTaxa:%2$.2f \nValor final:%3$.2f</string>
-    <string name="respostajuros" >Valor Presente:%1$.2f \nTaxa:%2$.2f %3$s ao %4$s \nTempo: %5$d %6$s \nValor final:%7$.2f</string>
-    <string name="respostaboleto" >Valor do Documento: %1$.2f \nData Vecimento: %2$s \nData Pagamento: %3$s \nMulta: %4$s \nJuros: %5$s \nValor Atualizado: %6$.2f</string>
+    <string name="sobre">Sobre</string>
+    <string name="jaco_diz">Jacó diz:\n</string>
+    <string name="respostadesconto">Valor Presente:%1$.2f \nTaxa:%2$.2f \nJuros:%3$.2f \nValor final:%4$.2f</string>
+    <string name="respostajuros">Valor Presente:%1$.2f \nTaxa:%2$.2f %3$s ao %4$s \nTempo: %5$.2f %6$s \nJuros:%7$.2f \nValor final:%8$.2f</string>
+    <string name="respostaboleto">Valor do Documento: %1$.2f \nData Vecimento: %2$s \nData Pagamento: %3$s \nMulta: %4$s \nJuros: %5$s \nValor Atualizado: %6$.2f</string>
+    <string name="title_activity_ajuda">Ajuda</string>
+    <string name="title_activity_sobre">Sobre</string>
+    <string name="siteoficial">http://www.shotlets.com.br/jaco/</string>
+    <string name="empresa_texto">\nJacó by Shortlets and Franqlin Soares</string>
+    <string name="sobre_texto"> is licensed under a Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Brazil License.Based on a work at www.shotlets.com.br.Permissions beyond the scope of this license may be available at www.shotlets.com.br/jaco/regras.</string>
     
-    
+
 </resources>

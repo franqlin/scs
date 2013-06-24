@@ -158,7 +158,6 @@ public static double calcularBoleto(double valorAtual,double multa,double juros,
 			
 			ValorAtualizado =valorAtual + multa + juros;
 		}// fim if dias>0
-		Log.i("__________TOTAL DE DIAS", " " + dias);
 		return ValorAtualizado;
 }
 

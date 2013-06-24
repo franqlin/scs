@@ -14,7 +14,7 @@ import android.provider.CalendarContract;
 import android.text.Spannable;
 import android.text.SpannableString;
 import android.text.style.TypefaceSpan;
-import android.view.Menu;
+import android.util.Log;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
@@ -24,20 +24,19 @@ import com.actionbarsherlock.ActionBarSherlock.OnCreateOptionsMenuListener;
 import com.actionbarsherlock.app.ActionBar;
 import com.actionbarsherlock.app.SherlockActivity;
 
+import com.actionbarsherlock.view.Menu;
 import com.actionbarsherlock.view.MenuItem;
+import com.actionbarsherlock.view.SubMenu;
 import com.actionbarsherlock.widget.ShareActionProvider;
 
-public class Principal extends Activity implements OnCreateOptionsMenuListener {
+public class Principal extends  SherlockActivity  {
 
-	
-	ActionBarSherlock mSherlock = ActionBarSherlock.wrap(this);
 	@SuppressLint("NewApi")
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-        mSherlock.setUiOptions(ActivityInfo.UIOPTION_SPLIT_ACTION_BAR_WHEN_NARROW);
-        mSherlock.setContentView(R.layout.activity_principal);
-		//setContentView(R.layout.activity_principal);
+      
+		setContentView(R.layout.activity_principal);
 		configFontTypeFace();
 		configImageButtons();
 
@@ -80,27 +79,42 @@ public class Principal extends Activity implements OnCreateOptionsMenuListener {
         TextView tvCalendario = (TextView) findViewById(R.id.tvCalendario);
         tvCalendario.setTypeface(tf);
 	}
+	private final int AJUDA_ID = Menu.FIRST;
+	private final int SOBRE_ID = Menu.FIRST + 1;
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+    	SubMenu menuAjuda = menu.addSubMenu("Menu");
+        //menuAjuda.add(Menu.NONE, AJUDA_ID, Menu.NONE,getString(R.string.ajuda));
+        menuAjuda.add(Menu.NONE, SOBRE_ID, Menu.NONE,getString(R.string.sobre));
+       
+
+        MenuItem subMenu1Item = menuAjuda.getItem();
+        subMenu1Item.setIcon(R.drawable.help);
+        subMenu1Item.setShowAsAction(MenuItem.SHOW_AS_ACTION_ALWAYS);
+
+        return super.onCreateOptionsMenu(menu);
+    }
 
 	@Override
-	public boolean onCreateOptionsMenu(Menu menu) {
+	public boolean onOptionsItemSelected(MenuItem item) {
 		
-		 return mSherlock.dispatchCreateOptionsMenu(menu);
-	}
-	
-	private final int SALVAR_ID = Menu.FIRST;
-	private final int BUSCAR_ID = Menu.FIRST + 1;
-	private final int ATUALIZAR_ID = Menu.FIRST + 2;
-	
-	@Override
-	public boolean onCreateOptionsMenu(com.actionbarsherlock.view.Menu menu) {
-        
-		menu.add(Menu.NONE, BUSCAR_ID, Menu.NONE,getString(R.string.ajuda))
-            .setIcon(R.drawable.help)
-            .setShowAsAction(MenuItem.SHOW_AS_ACTION_IF_ROOM | MenuItem.SHOW_AS_ACTION_WITH_TEXT);
-
+		switch (item.getItemId()) {
+		/*case AJUDA_ID:
+			Log.i("TESTE","  AJUDA !!! ");
+	          Intent intentAjuda = new Intent(this,Ajuda.class);
+	          this.startActivity(intentAjuda);
+			break;*/
+		case SOBRE_ID:
+	          Intent intentSobre = new Intent(this,Sobre.class);
+	          this.startActivity(intentSobre);
 		
-
-        return true;
+			break;
+		default:
+			break;
+		}
+		
+		return true;
 	}
 
 

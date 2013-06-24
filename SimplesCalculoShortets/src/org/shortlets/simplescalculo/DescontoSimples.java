@@ -45,6 +45,7 @@ public class DescontoSimples extends Activity implements OnCreateOptionsMenuList
     private double dValorPresente;
     private double dTaxa;
     private double valorfinal=0.0;
+    private double vPercentual=0.0;
     private String alertResposta;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -104,18 +105,18 @@ public class DescontoSimples extends Activity implements OnCreateOptionsMenuList
 
 	private void calcular() {
        
-       
+		vPercentual = (dValorPresente * dTaxa * .01);
        switch (tipoCalculo) {
 	case DESCONTO:
 		alertResposta = getString(R.string.labelRespDesconto);
 		
-		valorfinal = dValorPresente - (dValorPresente * dTaxa * .01);
+		valorfinal = dValorPresente - vPercentual ;
 		break;
 
 	case ACRESCIMO:
 		alertResposta = getString(R.string.labelRespAcrescimo);
 		
-		valorfinal = dValorPresente + (dValorPresente * dTaxa * .01);
+		valorfinal = dValorPresente + vPercentual;
 		break;
 	default:
 		break;
@@ -127,9 +128,6 @@ public class DescontoSimples extends Activity implements OnCreateOptionsMenuList
 	@Override
 	protected void onSaveInstanceState(Bundle outState) {
 		super.onSaveInstanceState(outState);
-
-		//outState.putDouble(DESC_TOTAL, valorDeEntrada);
-		//outState.putDouble(PERCENTUAL, percentualCorrente);
 	}
 
 	public void escolherTipoCalculo(View view) {
@@ -180,7 +178,7 @@ public class DescontoSimples extends Activity implements OnCreateOptionsMenuList
 		switch (item.getItemId()) {
 		case SALVAR_ID:
              
-			String msg =alertResposta+"\n"+ String.format(getString(R.string.respostadesconto),dValorPresente,dTaxa,valorfinal );
+			String msg =getString(R.string.jaco_diz)+ String.format(getString(R.string.respostadesconto),dValorPresente,dTaxa,vPercentual,valorfinal );
 			ViewUtil.enviarMensagem(msg, this);
 			
 		break;
@@ -202,9 +200,12 @@ public class DescontoSimples extends Activity implements OnCreateOptionsMenuList
 				//Taxa
             	alertaBuilder.builderTextView(R.id.label2, getString(R.string.taxa));
 				alertaBuilder.builderTextView(R.id.resp2, String.format("%.02f", dTaxa)+"%");
-				// Valor Futuro
-            	alertaBuilder.builderTextView(R.id.label3, getString(R.string.valor_futuro));
-				alertaBuilder.builderTextView(R.id.resp3,  getString(R.string.dinheiro)+" " +String.format("%.02f", valorfinal));
+				// Valor percentual
+		     	alertaBuilder.builderTextView(R.id.label3, getString(R.string.juros));
+				alertaBuilder.builderTextView(R.id.resp3, String.format("%.02f", vPercentual));
+				// valor futuro
+            	alertaBuilder.builderTextView(R.id.label4, getString(R.string.valor_futuro));
+				alertaBuilder.builderTextView(R.id.resp4,  getString(R.string.dinheiro)+" " +String.format("%.02f", valorfinal));
 				
 				
 			} catch (ViewException e) {
@@ -217,9 +218,6 @@ public class DescontoSimples extends Activity implements OnCreateOptionsMenuList
             
             alertaBuscar.setPositiveButton("OK", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int whichButton) {
-                 // String value = input.getText().toString();
-                 // Do something with value!
-                 //You will get input data in this variable. 
                 	dialog.cancel();
           
                   }
@@ -261,23 +259,7 @@ public class DescontoSimples extends Activity implements OnCreateOptionsMenuList
 		
 		return super.onOptionsItemSelected(item);
 	}
-	Point p;
-	@Override
-	public void onWindowFocusChanged(boolean hasFocus) {
-
-	   int[] location = new int[2];
-	  // Button button = (Button) findViewById(R.id.show_popup);
-
-	   // Get the x, y location and store it in the location[] array
-	   // location[0] = x, location[1] = y.
-	   //button.getLocationOnScreen(location);
-
-	   //Initialize the Point with x, and y positions
-	   p = new Point();
-	   p.x = location[0];
-	   p.y = location[1];
-	}
-
+	
 
 	
 }
